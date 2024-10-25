@@ -34,3 +34,251 @@ $ombreSm: 0 0 1px rgba(0, 0, 0, 0.2);
 $ombreMd: 0 0 3px rgba(0, 0, 0, 0.3);
 $ombreLg: 0 0 5px rgba(0, 0, 0, 0.4);
 $ombreXl: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: $siteBackground;
+	font-size: $tailleFont;
+	font-family: $familyFont;
+	line-height: $lineHeight;
+
+	h1 {
+		font-size: $tailleH1;
+		font-family: $familyTitle;
+		margin: 5px;
+	}
+	h2 {
+		font-size: $tailleH2;
+		font-family: $familyTitle;
+		margin: 0;
+	}
+	h3 {
+		font-size: $tailleH3;
+		font-family: $familyTitle;
+		margin: 0;
+	}
+	.suite {
+		margin-top: 100px;
+	}
+
+	header {
+		.optionPreheader {
+			background-color: $menuBackground;
+			text-align: center;
+			padding: 5px;
+			margin-bottom: 20px;
+			color: black;
+
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			a {
+				color: $aButton;
+				margin-left: 5px;
+			}
+		}
+
+		background-image: url(../../exo/FRONT/images/header.jpg);
+		background-position: center;
+		text-align: center;
+		color: white;
+
+		img {
+			width: 100px;
+		}
+		p {
+			margin: 5px;
+		}
+		button {
+			margin: 20px;
+			color: white;
+			border: none;
+			background-color: transparent;
+
+			i {
+				padding-bottom: 15px;
+			}
+		}
+		ul {
+			background-color: $menuBackground;
+			color: $aButton;
+			list-style-type: none;
+			padding: 5px;
+
+			li {
+				padding: 10px;
+			}
+
+			img {
+				width: 15px;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	main {
+		padding: 15px;
+
+		.AOC {
+			display: flex;
+			flex-direction: column;
+
+			h2 {
+				margin-bottom: 20px;
+			}
+		}
+
+		section {
+			margin-top: 75px;
+		}
+
+		.zoneTitreSection {
+			width: 100%;
+			max-width: 100%;
+			text-wrap: nowrap;
+			overflow: hidden;
+		}
+		.titreSection {
+			position: relative;
+			&::after {
+				content: "• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •"; /* Chaîne de points */
+				font-size: 35px;
+				position: absolute;
+				color: $fondElementGris;
+				top: 50%;
+				transform: translateY(-50%);
+				letter-spacing: 8px;
+				margin-left: 40px;
+			}
+		}
+
+		.infoTV {
+			margin-top: 30px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+
+			.rassembleEtiquette {
+				display: flex;
+				align-items: center;
+
+				.triangle {
+					border-top: 15px solid transparent;
+					border-bottom: 15px solid transparent;
+					border-right: 15px solid $fondElementGris;
+				}
+				.btn {
+					background-color: $fondElementGris;
+					border: none;
+					border-radius: 0 5px 5px 0;
+					color: black;
+					padding: 5px 15px 5px 0;
+					box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+					.badge {
+						width: 7px;
+						height: 7px;
+						border-radius: 50%;
+						box-shadow: inset $ombreSm;
+					}
+				}
+			}
+
+			.etiquette {
+				text-align: right;
+				background-color: $fondElementGris;
+				border-radius: 100% 5% 5% 100%;
+				margin-left: 10px;
+				padding-left: 20px;
+
+				.trouEtiquette {
+					position: relative;
+					top: 50%;
+					transform: translateY(-50%);
+					left: -20px;
+
+					width: 7px;
+					height: 7px;
+					background-color: white;
+					border-radius: 50%;
+					box-shadow: inset $ombreSm;
+				}
+			}
+		}
+
+		.carousel {
+			margin-bottom: 35px;
+			p {
+				text-align: center;
+			}
+		}
+		.switchSlider {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			width: 80%;
+			margin: 30px auto;
+
+			img {
+				width: 15%;
+			}
+		}
+
+		.miseAuPanier {
+			p {
+				&.marque {
+					margin: 15px 0;
+				}
+				&.prix {
+					margin: 5px 0;
+				}
+				&.sousInfo {
+					font-size: 0.8em;
+					margin: 0;
+				}
+			}
+			button {
+				border: none;
+				background-color: $headerBackground;
+				color: white;
+				padding: 5px 10px;
+				margin-right: 10px;
+			}
+		}
+		ul {
+			margin-left: 15px;
+		}
+
+		.descriptif {
+			img {
+				width: 100%;
+				padding: 20px;
+				border: $borderSm;
+				margin: 15px 0;
+			}
+
+			p:last-of-type {
+				margin-top: 15px;
+			}
+		}
+
+		.confort {
+			img {
+				width: 100%;
+				padding: 20px;
+				border: $borderSm;
+				margin: 15px 0;
+			}
+			p:last-of-type {
+				margin-top: 15px;
+			}
+		}
+
+		tr {
+			border: 1px solid red;
+		}
+	}
+}
